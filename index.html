@@ -3,58 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>病栋派对 - New Day</title>
-    <script src="themes/javascript/pixi.js"></script>
+    <script src="themes/javascript/pixleo.js"></script>
+    <script src="themes/javascript/game.js"></script>
     <link rel="stylesheet" href="themes/css/index.css">
 </head>
 <body>
 
 </body>
 </html>
-<script>
-    // 创建画布
-    var width = window.innerWidth, height = window.innerHeight;
-    var app;
-    // 默认字体大小
-    var fontSize = 14;
-    // 初始化游戏
-    init();
-
-    // 初始化游戏
-    /**
-     * 初始化游戏
-     */
-    function init() {
-        var app = new PIXI.Application(width, height);
-        document.body.appendChild(app.view);
-        /**
-         * 创建欢迎语
-         */
-        // 设置字体样式
-        var textStyle = new PIXI.TextStyle({
-            fill : 0x990000,
-            fontSize : '10rem'
-        });
-        var welcome = new PIXI.Text('病栋派对' ,textStyle);
-        // 设置字体坐标
-        welcome.x = width / 2 - welcome.width / 2;
-        welcome.y = height / 2 - welcome.height / 2;
-        // 文字添加到舞台
-        app.stage.addChild(welcome);
-        /**
-         * 创建血迹
-         */
-        // 创建图像
-        var graphics = new PIXI.Graphics(30,30,50);
-        // 画圆
-        graphics.lineStyle(0);  // 没有线条样式
-        graphics.beginFill(0x990000);   //填充颜色
-        graphics.drawCircle(width / 6,height / 6,50);
-        graphics.drawCircle(width / 2.5,height / 4,30);
-        graphics.drawCircle(width / 1.2,height / 3,70);
-        graphics.drawCircle(width / 7,height / 1.3,100);
-        graphics.drawCircle(width / 1.4,height / 1.2,70);
-        graphics.endFill(); //结束填充
-        app.stage.addChild(graphics);
-        //app.stage.addChild(blood);
-    }
-</script>
