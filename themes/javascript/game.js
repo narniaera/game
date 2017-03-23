@@ -26,8 +26,21 @@ var Game = function (options) {
 }
 Game.prototype.start = function (data) {
     // 创建应用
-    this.data.app = new PIXLEO.Application(window.innerWidth,window.innerHeight);
+    this.data.app = new PIXLEO.Application(window.innerWidth, window.innerHeight);
     // 创建画布
-    //document.body.appendChild(this.data.app.canvas.view);
     this.data.app.insert(document.body);
+    // 绘制阴影
+    this.data.app.shadow(20,'black');
+    this.data.app.fillRect('blue',20,20,100,80);
+    this.data.app.restore();
+    // 填充矩形
+    this.data.app.fillRect('blue',20,120,100,80);
+    this.data.app.restore();
+    // 线框矩形
+    this.data.app.strokeRect('blue',20,220,100,80);
+    this.data.app.restore();
+    // 清楚区域
+    this.data.app.fillRect('blue',20,320,100,80);
+    this.data.app.clearRect(30,330,80,60)
+    this.data.app.restore();
 }
