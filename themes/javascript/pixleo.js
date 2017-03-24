@@ -98,7 +98,7 @@
     }
     /**
      * 绘制线条矩形
-     * param fillStyle  颜色  #000000 | 颜色对象
+     * @param fillStyle  颜色  #000000 | 颜色对象
      * @param x         x坐标 起始点
      * @param y         y坐标 起始点
      * @param width     宽度
@@ -109,7 +109,7 @@
         this.canvas.context.strokeRect(x, y, width, height);
     }
     /**
-     * 创建矩形
+     * @创建矩形
      * @param x         x坐标 起始点
      * @param y         y坐标 起始点
      * @param width     宽度
